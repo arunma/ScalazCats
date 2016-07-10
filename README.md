@@ -1,0 +1,1 @@
+Practice worksheets for Scalaz and Cats referring to the tutorials at http://eed3si9n.com/learning-scalaz/
