@@ -24,7 +24,7 @@ object ToCanTruthySimpleOps {
 //Implicit classes
 object ToCanTruthyRefinedClassOps{
   implicit class toTruthysClass[A](value:A){
-    def truthy(implicit ev:CanTruthy[A])={
+    def truthy(implicit ev:CanTruthy[A]): Boolean ={
       ev.truthys(value)
     }
   }
