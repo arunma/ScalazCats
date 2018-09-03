@@ -1,6 +1,4 @@
 import cats._
-/*import cats.std.all._
-import cats.syntax.order._*/
 import cats.implicits._
 
 1===1

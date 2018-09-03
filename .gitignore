@@ -28,3 +28,18 @@ project/plugins/project/
 .scala_dependencies
 .worksheet
 
+.idea/.name
+.idea/compiler.xml
+.idea/copyright/
+.idea/libraries/
+.idea/misc.xml
+.idea/modules.xml
+.idea/modules/
+.idea/sbt.xml
+.idea/scala_compiler.xml
+.idea/workspace.xml
+project/project/
+src/main/java/
+src/main/resources/
+src/main/scala-2.11/
+src/test/

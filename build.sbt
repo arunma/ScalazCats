@@ -1,18 +1,19 @@
-name := "Workbench"
+name := "ScalazCats"
 
 version := "1.0"
 
-scalaVersion := "2.11.8"
+scalaVersion in ThisBuild := "2.12.6"
+scalacOptions in ThisBuild ++= Seq(
+  "-language:_", //  "-language:higherKinds" etc
+  "-Ypartial-unification",
+  "-Xfatal-warnings",
+)
 
-libraryDependencies ++= {
-  Seq(
-    "org.scalaz" %% "scalaz-core" % "7.2.4",
-    "org.scalaz" %% "scalaz-effect" % "7.2.4",
-    "org.scalaz" %% "scalaz-concurrent" % "7.2.4",
-    "org.typelevel" %% "cats" % "0.6.1"
-  )
-}
+libraryDependencies ++= Seq(
+  "org.typelevel" %% "cats-core" % "1.2.0",
+  "com.github.mpilquist" %% "simulacrum"     % "0.13.0",
+  "org.scalaz"           %% "scalaz-core"    % "7.2.26"
+)
 
-resolvers += Resolver.sonatypeRepo("releases")
-
-addCompilerPlugin("org.scalamacros" % "paradise" % "2.1.0" cross CrossVersion.full)
+addCompilerPlugin("org.spire-math" %% "kind-projector" % "0.9.7")
+addCompilerPlugin("org.scalamacros" % "paradise" % "2.1.1" cross CrossVersion.full)
